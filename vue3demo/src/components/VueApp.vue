@@ -1,27 +1,46 @@
 <template>
     <div>
-        <div :class="{one}">{{mes}}</div>
-        <div :class="{two,one}">{{mes}}</div>
-        <div :class="[array]">{{mes}}</div>
+      <ul>
+          <li v-for="b in books"  :key="b" >{{b}}</li>
+      </ul>
+      <hr/>
+      <ul>
+         <li v-for="(k,v,index) in booksobject"  :key="index" >{{index}}--{{k}}==={{v}}</li>
+      </ul>
         <hr/>
-        <div :title="mes">{{mes}}</div>
-        <img :src="imgurl" width="100">
-        <img :src="imgurl" :width="width">
-        <a href="https://www.lmonkey.com/study/course"> 学习园地</a>
-        <a :href="href"> 学习园地</a>
+        <ul>
+            <li @mouseout="out(index)" @mouseenter="enter(index)"  :class="{inss:currentIndex==index}"  v-for="(v,index) in bookArray"  :key="index" >{{index}}--{{v.name}}--{{v.priice}}--{{v.title}}</li>
+        </ul>
     </div>
 </template>
 
 <script>
     const data = {
-        one:false,
-        two:true,
-        array:"array",
-        box:"box",
-        mes:"this is a test",
-        imgurl:'https://cn.vuejs.org/images/logo.png',
-        width:100,
-        href:"https://www.lmonkey.com/study/course"
+        books:["java","php","javascript","python"],
+        booksobject:{
+            name:"java",
+            priice:20,
+            title:"java 是一门很好得语言"
+        },
+        bookArray:[
+            {
+                name:"java",
+                priice:20,
+                title:"java 是一门很好得语言"
+            },
+            {
+                name:"python",
+                priice:202,
+                title:"python 是一门很好得语言"
+            },
+            {
+                name:"go",
+                priice:22,
+                title:"go 是一门很好得语言"
+            }
+
+        ],
+        currentIndex:-1
     }
     export default {
         name: "VueApp",
@@ -29,30 +48,21 @@
             return data;
         },
         methods:{
-
+            enter(obj){
+                this.currentIndex = obj;
+                console.log(obj);
+            },
+            out(obj){
+                this.currentIndex = -1;
+                console.log(obj);
+            }
         }
     }
 </script>
 
 <style scoped>
-    .one {
-        background-color: red;
-        width: 300px;
-        height: 30px;
-    }
-    .two {
+    .inss{
         background-color: blue;
-        width: 300px;
-        height: 30px;
-    }
-    .array {
-        background-color: yellow;
-        width: 300px;
-        height: 30px;
-    }
-
-    .box {
-        background-color: yellow;
     }
 
 </style>
