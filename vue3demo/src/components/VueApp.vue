@@ -9,9 +9,11 @@
                 <Son v-if="flag"></Son>
             </keep-alive>
 
-            <input type="button" value="销毁实例" @click="destory">
         </div>
         <div class="right">
+            <ul>
+                <li v-for="(v,index) in articles" :key="index" >{{v.title}}</li>
+            </ul>
         </div>
         <footer>
             脚部
@@ -22,12 +24,14 @@
 <script>
     import Son from "./Son";
     //import Son1 from "./Son1";
+    import axios from  "axios";
 
 
     const data = {
         mes:"这是父组件得数据",
         num:0,
-        flag:true
+        flag:true,
+        articles:[]
     }
     export default {
         name: "VueApp",
@@ -42,38 +46,15 @@
         components:{
             Son
         },
-        beforeCreate() {
-            this.$nextTick(()=>{
-                console.log("#################延迟调用")
-            })
-            console.log("1==创建实例之前调用beforeCreate")
-        },
-        created() {
-            console.log("2==创建实完成调用created")
-        },
-        beforeMount() {
-            console.log("3==模板编译之前beforeMount")
-        },
         mounted() {
+            axios.get('http://jsonplaceholder.typicode.com/posts').then((rej)=>{
+                console.log(rej.data);
+                this.articles = rej.data;
+            }).catch((error)=>{
+                console.log(error);
+            })
+
             console.log("4==模板编译之后mounted")
-        },
-        beforeUpdate() {
-            console.log("5==模板更新之前beforeUpdate")
-        },
-        updated() {
-            console.log("6==模板更新完成updated")
-        },
-        beforeUnmount() {
-            console.log("7==实例销毁之前调用beforeUnmount")
-        },
-        unmounted() {
-            console.log("8==实例销毁之后调用unmounted")
-        },
-        activated() {
-            console.log("9==通过keep-alive 缓存之前调用 activated")
-        },
-        deactivated() {
-            console.log("10==缓存数据恢复调用 deactivated")
         }
 
     }
