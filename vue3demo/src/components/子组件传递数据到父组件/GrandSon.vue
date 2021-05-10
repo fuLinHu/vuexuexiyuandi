@@ -2,6 +2,7 @@
     <div>
       {{mess}}
         <hr/>
+        <input type="button" value="孙子数据传递给父" @click="sonSenDatatoParent(mess)">
         <ul>
             <li v-for="(v,index) in grandson" :key="index">
                 {{v}}
@@ -25,6 +26,9 @@
             }
         },
         methods:{
+            sonSenDatatoParent(){
+                this.$emit("grandSonFunction",this.mess)
+            }
         }
     }
 </script>
