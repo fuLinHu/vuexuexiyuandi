@@ -24,7 +24,9 @@
 <script>
     import Son from "./Son";
     //import Son1 from "./Son1";
-    import axios from  "axios";
+    //import axios from  "axios";
+
+    import {get} from "../commonjs/Request"
 
 
     const data = {
@@ -47,12 +49,35 @@
             Son
         },
         mounted() {
-            axios.get('http://jsonplaceholder.typicode.com/posts').then((rej)=>{
+            /*axios.get('http://jsonplaceholder.typicode.com/posts').then((rej)=>{
+                console.log(rej.data);
+                this.articles = rej.data;
+            }).catch((error)=>{
+                console.log(error);
+            })*/
+           /* axios.get('http://jsonplaceholder.typicode.com/posts',{
+                params:{
+                    userId:5
+                }
+            }).then((rej)=>{
+                console.log(rej.data);
+                this.articles = rej.data;
+            }).catch((error)=>{
+                console.log(error);
+            })*/
+            get("",{params:{userId:5}}).then((rej)=>{
                 console.log(rej.data);
                 this.articles = rej.data;
             }).catch((error)=>{
                 console.log(error);
             })
+           /* axios.post('https://jsonplaceholder.typicode.com/posts',{
+                u:'www.tiger.com'
+            }).then((rej)=>{
+                console.log(rej);
+            }).catch((error)=>{
+                console.log(error);
+            })*/
 
             console.log("4==模板编译之后mounted")
         }
