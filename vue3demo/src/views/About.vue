@@ -26,6 +26,9 @@
             sendDataByButton(){
                 this.$router.push({path:'/about/aboutsonparam',query:this.param})
             }
+        },
+        created() {
+            //document.title="这是关于"
         }
     }
 </script>

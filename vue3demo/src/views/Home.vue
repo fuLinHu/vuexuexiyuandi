@@ -4,7 +4,10 @@
 
 <script>
     export default {
-        name: "Home"
+        name: "Home",
+        created() {
+            //document.title="这是home"
+        }
     }
 </script>
 

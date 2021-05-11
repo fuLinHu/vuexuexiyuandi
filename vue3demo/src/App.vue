@@ -1,12 +1,14 @@
 <template>
     <div id="nav">
         <input value="跳转到首页" type="button" @click="toHome">
+        <router-link to="/home">测试重定向</router-link>|
         <router-link to="/">首页</router-link>|
         <router-link to="/about">关于我们</router-link>|
         <router-link to="/user">个人中心</router-link>|
         <router-link to="/intro">简介</router-link>
     </div>
     <hr/>
+
     <div class="home">
         <router-view name="Home"></router-view> <!--name="Home" 这个是给 router-view起一个名称，路由可以根据这个名称展示在这个位置-->
     </div>
