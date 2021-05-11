@@ -1,6 +1,7 @@
 import {createApp} from "vue"
 
-import VueApp from "./components/VueApp";
+import VueApp from "./App";
+import router from "./router";  /*//其中 /index index可以省略 如果是其他的名称则不能省略 */
 
 //创建 组件VueApp 挂在到 index.html的#app上
-createApp(VueApp).mount("#app")
+createApp(VueApp).use(router).mount("#app")
