@@ -1,11 +1,15 @@
 <template>
     <div id="nav">
+
         <input value="跳转到首页" type="button" @click="toHome">
         <router-link to="/home">测试重定向</router-link>|
         <router-link to="/">首页</router-link>|
         <router-link to="/about">关于我们</router-link>|
         <router-link to="/user">个人中心</router-link>|
-        <router-link to="/intro">简介</router-link>
+        <router-link to="/intro">简介</router-link>|
+        <router-link to="/vuex">test Vuex</router-link>
+        <hr>
+        vuex全局数据：{{$store.state.num}}
     </div>
     <hr/>
 
@@ -32,6 +36,11 @@
             toHome(){
                 this.$router.push('/')
             }
+        },
+        data(){
+            return {
+                num:0
+            }
         }
     }
 </script>
@@ -42,22 +51,22 @@
     }
     .home{
         background-color: blue;
-        width: 200px;
+        width: 400px;
         height: 150px;
     }
     .about{
         background-color: beige;
-        width: 200px;
+        width: 400px;
         height: 150px;
     }
     .user{
         background-color: #42b983;
-        width: 200px;
+        width: 400px;
         height: 150px;
     }
     .introduce{
         background-color:darkseagreen;
-        width: 200px;
+        width: 400px;
         height: 150px;
     }
 </style>

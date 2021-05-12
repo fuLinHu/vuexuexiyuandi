@@ -1,15 +1,20 @@
 import {createRouter,createWebHistory} from "vue-router"
 
 import Home from "../views/Home"
-// import About from "../views/About"
 import User from "../views/User"
 import Introduce from "../views/Introduce"
-
-//import AboutSonParam from "../views/aboutson/AboutSonParam";
 
 const AboutSonParam = ()=>import('../views/aboutson/AboutSonParam');
 
 const routes = [
+    {
+        path:"/vuex",
+        name:'VUEX',
+        component:()=>import('../views/TestVuex'),
+        meta:{
+            title:'VUEX'
+        }
+    },
      {
          path:"/",
          name:'Home',
