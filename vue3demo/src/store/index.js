@@ -1,11 +1,15 @@
 import {createStore} from "vuex";
 
+import {get} from "../commonjs/Request"
+
 export  default createStore({
     state:{
         num:0,
         dnum:0,
         paramnum:0,
-        artList:[{name:'java',price:20},{name:'java1',price:22},{name:'java2',price:25}]
+        artList:[{name:'java',price:20},{name:'java1',price:22},{name:'java2',price:25}],
+        count:0,
+        list:[]
     },
     mutations:{
         sub(state){
@@ -21,6 +25,12 @@ export  default createStore({
         addparam(state,param){
             console.log(param);
             state.paramnum+=(param.num1+param.num2);
+        },
+        increment (state) {
+            state.count++
+        },
+        remote(state,list){
+            state.list = list
         }
     },
     getters:{
@@ -39,7 +49,16 @@ export  default createStore({
         }
     },
     actions:{
+       getDataFromRemote(context,param){
+           console.log(param);
+           get("",{}).then((reg)=>{
+               context.commit('remote',reg) ;
+           })
 
+       },
+        incrementAction(context){
+            context.commit('increment')
+        }
     },
     modules:{
 

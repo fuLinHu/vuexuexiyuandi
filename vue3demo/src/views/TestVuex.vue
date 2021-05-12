@@ -22,6 +22,10 @@
       vuex 计算属性 计算属性互相调用：{{$store.getters.vuexcomputerscall}}
       <hr>
       vuex 计算属性 带参数：{{$store.getters.vuexcomputersParam("fulinhu",24)}}
+      <hr>
+      <input type="button" value="测试action" @click="incrementAction">{{$store.state.count}}
+      <hr>
+      <input type="button" value="测试action" @click="remote">{{$store.state.list}}
        <!-- <input type="button" value="+" @click="addparam">
         <input type="button" value="-" @click="subparam">-->
     </div>
@@ -48,6 +52,12 @@
             },
             subparam(){
               this.$store.commit('subparam',{num1:2,num2:1})
+            },
+            incrementAction(){
+                this.$store.dispatch("incrementAction")
+            },
+            remote(){
+              this.$store.dispatch("getDataFromRemote",{num1:2,num2:1})
             }
         },
         components: {VuexSon}
