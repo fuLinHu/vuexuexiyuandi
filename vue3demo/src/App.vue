@@ -51,22 +51,22 @@
     }
     .home{
         background-color: blue;
-        width: 400px;
+        width: 800px;
         height: 150px;
     }
     .about{
         background-color: beige;
-        width: 400px;
+        width: 800px;
         height: 150px;
     }
     .user{
         background-color: #42b983;
-        width: 400px;
+        width: 800px;
         height: 150px;
     }
     .introduce{
         background-color:darkseagreen;
-        width: 400px;
+        width: 800px;
         height: 150px;
     }
 </style>

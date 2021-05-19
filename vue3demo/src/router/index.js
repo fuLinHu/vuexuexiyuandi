@@ -4,6 +4,8 @@ import Home from "../views/Home"
 import User from "../views/User"
 import Introduce from "../views/Introduce"
 
+import VuexSonTest from "../views/vuexson/VuexSonTest"
+
 const AboutSonParam = ()=>import('../views/aboutson/AboutSonParam');
 
 const routes = [
@@ -13,7 +15,14 @@ const routes = [
         component:()=>import('../views/TestVuex'),
         meta:{
             title:'VUEX'
-        }
+        },
+        children:[
+            {
+                path:"son",
+                name:"Son",
+                component:VuexSonTest
+            }
+        ]
     },
      {
          path:"/",

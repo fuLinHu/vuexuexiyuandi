@@ -28,6 +28,10 @@
       <input type="button" value="测试action" @click="remote">{{$store.state.list}}
        <!-- <input type="button" value="+" @click="addparam">
         <input type="button" value="-" @click="subparam">-->
+      <router-link to="/vuex/son">跳转到子页面</router-link>
+      <div>
+        <router-view></router-view>
+      </div>
     </div>
 </template>
 

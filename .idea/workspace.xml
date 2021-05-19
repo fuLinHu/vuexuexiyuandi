@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d51e635-11b7-4e61-815f-59e88a1ef227" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vue3demo/src/commonjs/Request.js" afterDir="false" />
+    <list default="true" id="7d51e635-11b7-4e61-815f-59e88a1ef227" name="Default Changelist" comment="路由">
+      <change afterPath="$PROJECT_DIR$/vue3demo/src/store/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue3demo/src/store/getters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue3demo/src/store/index.js.source" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue3demo/src/store/modules/VuexSon1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue3demo/src/store/mutations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue3demo/src/views/vuexson/VuexSonTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue3demo/src/components/Son.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue3demo/src/components/Son.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue3demo/src/components/VueApp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue3demo/src/components/VueApp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3demo/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue3demo/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3demo/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue3demo/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3demo/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue3demo/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3demo/src/views/TestVuex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue3demo/src/views/TestVuex.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue3demo/src/components/生命周期" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue3demo/src/store" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,16 +55,18 @@
     <property name="ts.external.directory.path" value="D:\soft\webstorm\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\views\introchildrent" />
+      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\views" />
+      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components" />
+      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\基础" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\store" />
+      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\网络请求" />
       <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\生命周期" />
       <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\插槽" />
       <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\父组件操作子组件的数据" />
-      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\子组件操作父组件的数据" />
-      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\子组件传递数据到父组件" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components" />
-      <recent name="E:\javacode\html\vuexuexiyuandi\vue3demo\src\components\基础" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -85,7 +95,8 @@
       <workItem from="1619744515721" duration="15074000" />
       <workItem from="1619780634704" duration="91000" />
       <workItem from="1620371146111" duration="16307000" />
-      <workItem from="1620617623610" duration="18332000" />
+      <workItem from="1620617623610" duration="18429000" />
+      <workItem from="1620692967346" duration="48165000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1619686766084</created>
@@ -129,7 +140,49 @@
       <option name="project" value="LOCAL" />
       <updated>1620638787456</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="网络请求封装">
+      <created>1620646627455</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620646627455</updated>
+    </task>
+    <task id="LOCAL-00008" summary="路由">
+      <created>1620731817774</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620731817774</updated>
+    </task>
+    <task id="LOCAL-00009" summary="路由">
+      <created>1620735176917</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620735176917</updated>
+    </task>
+    <task id="LOCAL-00010" summary="路由">
+      <created>1620812216365</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620812216365</updated>
+    </task>
+    <task id="LOCAL-00011" summary="vuex">
+      <created>1620812258492</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620812258492</updated>
+    </task>
+    <task id="LOCAL-00012" summary="vuex----">
+      <created>1620821475744</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620821475744</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,17 +194,25 @@
     <MESSAGE value="vue父亲传子" />
     <MESSAGE value="vue 插槽 子父组件数据传输  生命周期" />
     <MESSAGE value="网络请求" />
-    <option name="LAST_COMMIT_MESSAGE" value="网络请求" />
+    <MESSAGE value="网络请求封装" />
+    <MESSAGE value="路由" />
+    <MESSAGE value="vuex" />
+    <MESSAGE value="vuex----" />
+    <option name="LAST_COMMIT_MESSAGE" value="vuex----" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2472" y="179" key="#ESLint" timestamp="1619744670059">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="179" key="#ESLint/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1619744670059" />
-    <state x="2480" y="114" key="CommitChangelistDialog2" timestamp="1620638785538">
+    <state x="2601" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620962688473">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2480" y="114" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620638785538" />
+    <state x="2601" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620962688473" />
+    <state x="2480" y="114" key="CommitChangelistDialog2" timestamp="1620821473942">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2480" y="114" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620821473942" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1619780214163">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -172,18 +233,22 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="162" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620372923519" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1620638791921">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1620868912712">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620638791921" />
-    <state x="2672" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620636245029">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620868912712" />
+    <state x="2672" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621385892977">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2672" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620636245029" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620617695846">
+    <state x="2672" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621385892977" />
+    <state x="2556" y="119" width="647" height="801" key="find.popup" timestamp="1620962602437">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620617695846" />
+    <state x="2556" y="119" width="647" height="801" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620962602437" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620733556152">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1620733556152" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -191,7 +256,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/vue3demo/src/components/VueApp.vue</url>
           <line>69</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
