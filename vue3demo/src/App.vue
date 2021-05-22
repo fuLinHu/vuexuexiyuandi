@@ -8,6 +8,7 @@
         <router-link to="/user">个人中心</router-link>|
         <router-link to="/intro">简介</router-link>|
         <router-link to="/vuex">test Vuex</router-link>
+        <router-link to="/combination">test CombinationApi</router-link>
         <hr>
         vuex全局数据：{{$store.state.num}}
     </div>

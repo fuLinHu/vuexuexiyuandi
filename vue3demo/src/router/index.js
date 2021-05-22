@@ -10,6 +10,11 @@ const AboutSonParam = ()=>import('../views/aboutson/AboutSonParam');
 
 const routes = [
     {
+        path:'/combination',
+        name:'combination',
+        component:()=>import('../views/CombinationApi')
+    },
+    {
         path:"/vuex",
         name:'VUEX',
         component:()=>import('../views/TestVuex'),
